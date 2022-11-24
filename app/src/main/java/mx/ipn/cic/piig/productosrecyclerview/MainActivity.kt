@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             override fun onChildMoved(dataSnapshot: DataSnapshot, previousName: String?) {}
             override fun onChildChanged(dataSnapshot: DataSnapshot, previousName: String?) {
                 Log.d("onChildChanged", dataSnapshot.toString())
-                Log.d("onChildChanged2", previousName!!)
+                //Log.d("onChildChanged2", dataSnapshot.toString)
                 var producto = dataSnapshot.getValue(Producto::class.java)!!
                 productos.remove(dataSnapshot.key!!)
                 productos[dataSnapshot.key!!] = producto

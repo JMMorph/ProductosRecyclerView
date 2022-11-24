@@ -47,6 +47,7 @@ class ProductAdapter (private val productos: Map<String,Producto>) :
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         var temp = productos.keys.toTypedArray()
+        temp.sort()
         viewHolder.textViewMarca.text = productos[temp[position]]!!.marca
         viewHolder.textViewNombre.text = productos[temp[position]]!!.nombre
         viewHolder.textViewPrecio.text = productos[temp[position]]!!.precio
